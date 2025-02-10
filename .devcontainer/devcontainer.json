@@ -1,0 +1,27 @@
+{
+    "name": "Elixir",
+    "dockerFile": "Dockerfile",
+    "postCreateCommand": "elixir -v",
+    "runArgs": [
+        "--network=host"
+    ],
+    "mounts": [
+        "source=${env:HOME}/.ssh,target=/root/.ssh,type=bind"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "JakeBecker.elixir-ls",
+                "benvp.vscode-hex-pm-intellisense",
+                "mechatroner.rainbow-csv",
+                "bradlc.vscode-tailwindcss",
+                "esbenp.prettier-vscode",
+                "pgourlain.erlang",
+                "ms-vscode.makefile-tools",
+                "humao.rest-client",
+                "ms-azuretools.vscode-docker",
+                "AykutSarac.jsoncrack-vscode"
+            ]
+        }
+    }
+}
